@@ -3,9 +3,9 @@
 ```
 mvn package
 
-docker build -f src/main/docker/Dockerfile.jvm -t quay.io/openshiftlabs/mad-workshop-deployer:1.0 .
+docker build -f src/main/docker/Dockerfile.jvm -t quay.io/openshiftlabs/mad-workshop-deployer:1.0 . --platform linux/amd64
 
-docker push quay.io/cloud-architecture-workshop/workshop-deployer:1.0
+docker push quay.io/openshiftlabs/mad-workshop-deployer:1.0
 
 ```
 
@@ -16,8 +16,9 @@ Environment variables needed to run this locally. These are default values.
 export NAMESPACE=workshop-deployer
 export ALLOWED_MODULES_COUNT=2
 export BOOKBAG_NAMESPACE=bookbag
-export OPENSHIFT_DOMAIN=apps.cluster-psl4g.psl4g.sandbox1250.opentlc.com
+export OPENSHIFT_DOMAIN=aapps.cluster-stgl2.stgl2.sandbox421.opentlc.com
 export USER_PASSWORD=openshift
 export ARGO_NAMESPACE_PREFIX=globex-gitops
-export TEST_USER=user2
+export TEST_USER=user1
+export QUARKUS_KUBERNETES_CLIENT_TRUST_CERTS=true
 ```
