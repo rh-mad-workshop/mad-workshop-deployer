@@ -1,11 +1,11 @@
 # workshop-deployer
 
 ```
-mvn package
+mvn clean package
 
-docker build -f src/main/docker/Dockerfile.jvm -t quay.io/openshiftlabs/mad-workshop-deployer:latest . --platform linux/amd64
+docker build -f src/main/docker/Dockerfile.jvm -t quay.io/openshiftlabs/mad-workshop-deployer:1.0 . --platform linux/amd64
 
-docker push quay.io/openshiftlabs/mad-workshop-deployer:latest
+docker push quay.io/openshiftlabs/mad-workshop-deployer:1.0
 
 ```
 
