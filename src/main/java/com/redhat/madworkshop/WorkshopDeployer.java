@@ -1,4 +1,4 @@
-package com.redhat.cloudarchitectureworkshop;
+package com.redhat.madworkshop;
 
 import io.fabric8.kubernetes.api.model.ConfigMap;
 import io.fabric8.kubernetes.api.model.GenericKubernetesResource;
