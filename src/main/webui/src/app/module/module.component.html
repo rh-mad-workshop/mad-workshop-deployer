@@ -53,7 +53,19 @@
 
 
   </div>
-  <div class="card-footer "
+
+  <div *ngIf="module.isDefault" class="card-footer "
+      [ngClass]="{
+        'bg-success text-white': 'Healthy'
+      }"
+    >
+
+    <span class="float-left"> Deployed: true </span>
+    <span class="float-left">&nbsp; | &nbsp; Sync Status: Synced&nbsp; | &nbsp;</span>
+    <span class="float-left">Health: Healthy</span>
+  </div>
+
+  <div *ngIf="!module.isDefault" class="card-footer "
       [ngClass]="{
         'bg-success text-white': module.deployed && module.health=='Healthy',
         'bg-warning': (module.deployed && !module.deleting && module.health!='Healthy'),
