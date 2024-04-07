@@ -32,7 +32,7 @@
           <a href="{{globalConfig['SHOWROOM_URL']}}/{{module.application}}-instructions.html" target="_application">Instructions</a>&nbsp;
         </div>
         <div class="col">
-          <div *ngIf="maxModulesReached && !module.deployed" class=" float-end">
+          <div *ngIf="!module.isDefault && maxModulesReached && !module.deployed" class=" float-end">
             <button type="button" class="btn btn-sm btn-secondary btn-disabled" (click)="sendAlert('MAX_MODULES_DEPLOYED')"><i class="fa fa-plus-circle fa-lg"></i>&nbsp;Deploy &nbsp;</button>&nbsp;
             <i class="fa fa-question-circle text-warning" (click)="sendAlert('MAX_MODULES_DEPLOYED')" ></i>
           </div>
